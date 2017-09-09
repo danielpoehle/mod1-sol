@@ -13,7 +13,9 @@
 <body>
    <div class="container" ng-controller="lunchController">
      <h1>Lunch Checker</h1>
-
+     <div class="form-group message bg-primary text-white">
+       Please Note: Empty items, i.e. ", ," are NOT counted as an item in the list!
+     </div>
          <div class="form-group">
              <input id="lunch-menu" type="text"
               ng-model="list"
@@ -26,10 +28,9 @@
              Check If Too Much
            </button>
          </div>
-         <div class="form-group message">
+         <div class="form-group message {{alert}}">
            <!-- Your message can go here. -->
            {{message}}
-           {{list}}
          </div>
    </div>
 

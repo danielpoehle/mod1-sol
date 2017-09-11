@@ -19,15 +19,18 @@ function LunchCheckController($scope){
     if (number === 0) {
       $scope.message = "Please enter data first";
       $scope.alert = "text-danger";
+      $scope.messageColor = 'red';
     }else {
       if (number <=3) {
         //$scope.message = number;
         $scope.message = "Enjoy!";
         $scope.alert = "text-success";
+        $scope.messageColor = 'green';
       } else {
         //$scope.message = 2*number;
         $scope.message = "Too much!";
         $scope.alert = "text-success";
+        $scope.messageColor = 'green';
       }
     }
   };
